@@ -1,32 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+  
   <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    
     <title>Computer Science Project 2026</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
   </head>
   
   <body>
-    <title>
-      Computer Science Project 2026
-    </title>
 
-    <!--<header style="text-align: center;">
-      <h1>Computer Science Project 2026</h1>
-      <h2>Student 367630</h2>
-    </header>-->
-
-    <div class="sidebar">
-      <a href="index.html">Introduction</a>
-      <a href="investigation.html">Investigation</a>
-      <a href="plan.html">Plan and Design </a>
-      <a href="refs.html">Project References</a>
-      <a href="wordcount.html">Word Count</a>
-      <a href="create.html">Create</a>
-      <a href="eval.html">Evaluation</a>
-      <a href="alt3flowchart.html">Sample Flowchart</a>
-    </div>
+    <div id="sidebar"></div>
+    
+    <script>
+      fetch('sidebar.html')
+        .then(r => r.text())
+        .then(html => document.getElementById('sidebar').innerHTML = html);
+    </script>
 
     <div class="content">
       <h1>Computer Science Project 2026</h1>
@@ -36,4 +30,5 @@
     </div>
 
   </body>
+
 </html>
