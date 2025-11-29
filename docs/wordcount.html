@@ -14,18 +14,34 @@
   
   <body>
     
+    <header class="topbar">
+      <h1>Computer Science Project 2026</h1>
+    </header>
+
     <div id="sidebar"></div>
+
+    <div class="content">
+      <h1>Word Count</h1>
+      <br>
+      <p>content</p>
+    </div>
     
     <script>
       fetch('sidebar.html')
         .then(r => r.text())
-        .then(html => document.getElementById('sidebar').innerHTML = html);
+        .then(html => {
+          document.getElementById('sidebar').innerHTML = html;
+          
+          // Highlight current page
+          const currentPage = window.location.pathname.split('/').pop();
+          const links = document.querySelectorAll('.sidebar a');
+          links.forEach(link => {
+            if(link.getAttribute('href') === currentPage) {
+              link.classList.add('active');
+            }
+          });
+        });
     </script>
-
-    <div class="content">
-      <h1>Title</h1>
-      <p>content</p>
-    </div>
 
   </body>
 

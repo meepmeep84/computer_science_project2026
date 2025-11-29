@@ -2,61 +2,92 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
 }
 
+body {
+  background-color: #2c2c2c;
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+.topbar {
+  background-color: #1f1f1f;
+  height: 60px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  padding-left: 220px;
+  z-index: 100;
+  overflow: auto;
+}
 
 /* The side navigation menu */
 .sidebar {
+  top: 60px; /* Start below header */
   margin: 0;
   padding: 0;
+  height: calc(100% - 60px);
   width: 200px;
-  background-color: #f1f1f1;
+  background-color: #3a3a3a;
   position: fixed;
-  height: 100%;
   overflow: auto;
 }
 
 /* Sidebar links */
 .sidebar a {
   display: block;
-  color: black;
+  color: white;
   padding: 16px;
   text-decoration: none;
 }
 
 /* Active/current link */
-.sidebar a.active {
-  background-color: #04AA6D;
-  color: white;
+/* #4a90e2 */
+  .sidebar a.active {
+  background-color: #e67e22;
+  color: #1f1f1f;
 }
 
 /* Links on mouse-over */
 .sidebar a:hover:not(.active) {
-  background-color: #555;
+  background-color: #4a4a4a;
   color: white;
 }
 
 /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
-div.content {
+.content {
   margin-left: 200px;
-  padding: 1px 16px;
-  height: 1000px;;
+  margin-top: 60px; /* Push below header */
+  padding: 20px;
 }
 
-/* On screens that are less than 700px wide, make the sidebar into a topbar */
+/* Responsive - tablet */
 @media screen and (max-width: 700px) {
+  .topbar {
+    font-size: 20px;
+    padding-left: 0px;
+    justify-content: center;
+  }
   .sidebar {
     width: 100%;
     height: auto;
     position: relative;
   }
-  .sidebar a {float: left;}
-  div.content {margin-left: 0;}
+  .sidebar a {float: left;
+  }
+  .content {margin-left: 0;
+  }
 }
 
-/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+/* Responsive - mobile */
 @media screen and (max-width: 400px) {
+  .topbar {
+    font-size: 16px;
+  }
   .sidebar a {
     text-align: center;
     float: none;
