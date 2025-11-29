@@ -69,6 +69,13 @@ body {
   padding: 20px;
 }
 
+.flowchart {
+  width: 90vw;
+  border: 1px solid transparent;
+  margin: 0 auto;
+  display: block;
+}
+
 /* Responsive - tablet */
 @media screen and (max-width: 700px) {
   .topbar {
