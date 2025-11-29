@@ -35,8 +35,6 @@ body {
   top: 60px;
   padding-bottom: 5rem;
   height: 100%;
-  /*height: calc(100vh - 3.5rem);
-  height: calc(100dvh - 3.5rem);*/
   width: 200px;
   background-color: #3a3a3a;
   position: fixed;
