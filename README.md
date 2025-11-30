@@ -1,1 +1,1 @@
-# computer_science_project2026
+# Computer Science Project 2026
